@@ -113,6 +113,7 @@ h3 {
 
 /* Footer */
 .footer-h10 {
+  margin: auto;
   background: var(--h10-blue);
   color: #fff;
 }

@@ -155,7 +155,7 @@
   <!-- Contacto + Footer -->
   <footer id="contacto" class="footer-h10 py-5">
     <div class="container px-3">
-      <div class="row g-4">
+      <div class="row g-4 align-items-end">
         <div class="col-12 col-md-6">
           <h2 class="h4 text-white">Contacto</h2>
           <p class="mb-1 small">📍 Dirección del hotel, Salou (Tarragona)</p>
@@ -163,7 +163,17 @@
           <p class="mb-0 small">✉️ info@ejemplo.com</p>
         </div>
         <div class="col-12 col-md-6">
-          <div class="map d-flex align-items-center justify-content-center small">Mapa de ubicación</div>
+          <!-- Mapa de Google Maps (iframe; ratio de Bootstrap para que sea responsive) -->
+          <div class="ratio ratio-21x9 rounded-3 overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=H10+Salou+Princess,+Salou&output=embed"
+              title="Ubicación de H10 Salou Princess en Google Maps"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              style="border:0">
+            </iframe>
+          </div>
         </div>
       </div>
       <p class="border-top border-light border-opacity-25 mt-4 pt-3 mb-0 small opacity-75">© 2026 Proyecto académico · Diseño propio inspirado en H10 Salou Princess</p>
