@@ -1,0 +1,161 @@
+/* ===== Tokens (los mismos que el resto de páginas) ===== */
+:root {
+    --h10-blue: #3A55BF;
+    --h10-green: #3BB89A;
+    --h10-gold: #C9A24B;
+    --h10-navy: #0B2545;
+    --h10-sand: #F4E9D8;
+    --h10-menu: #135F70;
+    --font-title: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: #1C2430;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: var(--font-title);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--h10-navy);
+}
+
+.eyebrow {
+    font-size: .75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #13A3B5;
+}
+
+/* Navbar */
+.navbar-h10 {
+    background: var(--h10-blue);
+    height: 64px;
+}
+
+.logo {
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo small {
+    display: block;
+    font: 500 .6rem var(--font-body);
+    letter-spacing: 2px;
+    color: var(--h10-gold);
+}
+
+.menu-panel {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1030;
+    width: 190px;
+    background: var(--h10-menu);
+}
+
+.menu-panel a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-head {
+    background: var(--h10-sand);
+}
+
+/* Resumen de la reserva */
+.summary-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(11, 37, 69, .12);
+    overflow: hidden;
+    background: #fff;
+}
+
+.summary-img {
+    height: 170px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    padding: .4rem 0;
+    border-bottom: 1px solid #EEF1F5;
+}
+
+.summary-row span:first-child {
+    color: #6B7686;
+}
+
+.total {
+    font-family: var(--font-title);
+    font-size: 1.75rem;
+    color: var(--h10-navy);
+}
+
+@media (min-width: 992px) {
+    .summary-sticky {
+        position: sticky;
+        top: 16px;
+    }
+}
+
+/* Formulario */
+.form-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(11, 37, 69, .12);
+}
+
+.form-label {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--h10-navy);
+}
+
+.form-control:focus,
+.form-check-input:focus {
+    border-color: var(--h10-green);
+    box-shadow: 0 0 0 .2rem rgba(59, 184, 154, .25);
+}
+
+.form-check-input:checked {
+    background-color: var(--h10-green);
+    border-color: var(--h10-green);
+}
+
+.pay-note {
+    background: var(--h10-sand);
+    border-radius: 12px;
+    font-size: .85rem;
+    color: var(--h10-navy);
+}
+
+.btn-h10 {
+    background: var(--h10-green);
+    color: var(--h10-navy);
+    font-weight: 600;
+    border: 0;
+}
+
+.btn-h10:hover {
+    background: #31a085;
+    color: var(--h10-navy);
+}
+
+/* Footer */
+.footer-h10 {
+    background: var(--h10-blue);
+    color: #fff;
+}

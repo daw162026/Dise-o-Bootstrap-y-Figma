@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H10 Salou Princess · Completar reserva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="complete-reservation.css">
+</head>
+<body>
+
+  <!-- Navbar con menú desplegable (Collapse) -->
+  <header class="position-relative">
+    <nav class="navbar navbar-h10 px-3">
+      <a class="logo" href="index.html">H10 Salou Princess<small>COSTA DORADA</small></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <svg width="26" height="26" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" fill="none"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <div id="menu" class="collapse menu-panel rounded-1 p-3">
+      <button class="btn-close btn-close-white float-end shadow-none" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Cerrar menú"></button>
+      <ul class="list-unstyled mb-0 pt-2">
+        <li class="py-1"><a href="index.html" class="menu-main">Volver Inicio</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head py-5">
+      <div class="container px-3">
+        <p class="eyebrow mb-1">Último paso</p>
+        <h1 class="h2 mb-2">Completa tu reserva</h1>
+        <p class="text-secondary mb-0">Revisa el resumen y rellena tus datos. Es una simulación: no se realiza ningún cargo.</p>
+      </div>
+    </section>
+
+    <section class="container px-3 py-5">
+      <div class="row g-4">
+
+        <!-- Resumen: primero en móvil, a la derecha desde lg -->
+        <div class="col-12 col-lg-5 order-lg-2">
+          <aside class="summary-card summary-sticky">
+            <img id="sum-img" src="https://pro-static.h10hotels.com/gallery/T2D3/01_HSPDoubleRoom1.jpg" class="summary-img w-100 object-fit-cover d-block" alt="Habitación seleccionada">
+            <div class="p-3">
+              <h2 class="h4 mb-3" id="sum-nombre">Habitación Doble</h2>
+              <div class="summary-row"><span>Entrada</span><strong id="sum-entrada">—</strong></div>
+              <div class="summary-row"><span>Salida</span><strong id="sum-salida">—</strong></div>
+              <div class="summary-row"><span>Huéspedes</span><strong id="sum-huespedes">2 adultos</strong></div>
+              <div class="summary-row"><span>Noches</span><strong id="sum-noches">3</strong></div>
+              <div class="summary-row"><span>Precio por noche</span><strong id="sum-precio">85 €</strong></div>
+              <div class="d-flex justify-content-between align-items-center pt-3">
+                <span class="text-secondary">Total (simulado)</span>
+                <span class="total" id="sum-total">255 €</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Formulario -->
+        <div class="col-12 col-lg-7 order-lg-1">
+          <form id="reserva" class="form-card p-3 p-md-4 needs-validation" novalidate>
+
+            <h2 class="h4 mb-3">Datos personales</h2>
+            <div class="row g-3 mb-4">
+              <div class="col-12 col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" autocomplete="given-name" required>
+                <div class="invalid-feedback">Introduce tu nombre.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" autocomplete="family-name" required>
+                <div class="invalid-feedback">Introduce tus apellidos.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" autocomplete="email" required>
+                <div class="invalid-feedback">Introduce un correo válido.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" autocomplete="tel" pattern="[0-9 +]{9,15}" required>
+                <div class="invalid-feedback">Introduce un teléfono válido.</div>
+              </div>
+              <div class="col-12">
+                <label for="peticiones" class="form-label">Peticiones especiales (opcional)</label>
+                <textarea class="form-control" id="peticiones" rows="2"></textarea>
+              </div>
+            </div>
+
+            <h2 class="h4 mb-3">Datos de pago (simulados)</h2>
+            <div class="pay-note p-3 mb-3">⚠️ No introduzcas datos bancarios reales. Usa números inventados: no se guardan ni se procesan.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-12">
+                <label for="titular" class="form-label">Titular de la tarjeta</label>
+                <input type="text" class="form-control" id="titular" autocomplete="off" required>
+                <div class="invalid-feedback">Introduce el titular.</div>
+              </div>
+              <div class="col-12">
+                <label for="tarjeta" class="form-label">Número de tarjeta</label>
+                <input type="text" class="form-control" id="tarjeta" inputmode="numeric" placeholder="0000 0000 0000 0000" pattern="[0-9 ]{16,19}" autocomplete="off" required>
+                <div class="invalid-feedback">Introduce 16 dígitos (ficticios).</div>
+              </div>
+              <div class="col-6">
+                <label for="caducidad" class="form-label">Caducidad</label>
+                <input type="text" class="form-control" id="caducidad" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" autocomplete="off" required>
+                <div class="invalid-feedback">Formato MM/AA.</div>
+              </div>
+              <div class="col-6">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cvv" inputmode="numeric" placeholder="123" pattern="[0-9]{3,4}" autocomplete="off" required>
+                <div class="invalid-feedback">3 o 4 dígitos.</div>
+              </div>
+            </div>
+
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="acepto" required>
+              <label class="form-check-label small" for="acepto">Acepto las condiciones de reserva (simulado).</label>
+              <div class="invalid-feedback">Debes aceptar las condiciones.</div>
+            </div>
+
+            <button type="submit" class="btn btn-h10 w-100 py-2">Finalizar reserva</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Confirmación (Modal de Bootstrap) -->
+  <div class="modal fade" id="confirmacion" tabindex="-1" aria-labelledby="confirmacionTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 text-center p-3">
+        <div class="modal-body">
+          <div class="display-4">✅</div>
+          <h2 class="h4 mt-2" id="confirmacionTitulo">¡Reserva simulada completada!</h2>
+          <p class="text-secondary mb-1">Referencia: <strong id="referencia">—</strong></p>
+          <p class="text-secondary small">Esto es una demostración: no se ha reservado ni cobrado nada.</p>
+          <a href="index.html" class="btn btn-h10 px-4 mt-2">Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-h10 py-4">
+    <div class="container px-3 small">
+      <p class="mb-1">📍 Dirección del hotel, Salou (Tarragona) · 📞 +34 000 000 000</p>
+      <p class="mb-0 opacity-75">© 2026 Proyecto académico · Diseño propio inspirado en H10 Salou Princess</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Habitaciones de ejemplo (clave = parámetro ?habitacion=)
+    const HABITACIONES = {
+      doble:    { nombre: 'Habitación Doble',        precio: 85,  img: 'https://pro-static.h10hotels.com/gallery/T2D3/01_HSPDoubleRoom1.jpg' },
+      familiar: { nombre: 'Habitación Familiar',     precio: 130, img: 'https://pro-static.h10hotels.com/gallery/T2D3/06_HSPFamilyRoom1.jpg' },
+      suite:    { nombre: 'Suite con vistas al mar', precio: 190, img: 'https://pro-static.h10hotels.com/gallery/T2D3/12_HSPDoubleSuperiorRoomTwinBed1.jpg' }
+    };
+
+    const params = new URLSearchParams(location.search);
+    const hab = HABITACIONES[params.get('habitacion')] || HABITACIONES.doble;
+
+    /** @param {string} iso fecha aaaa-mm-dd @returns {string} fecha dd/mm/aaaa */
+    const formatear = (iso) => iso.split('-').reverse().join('/');
+
+    // Noches = diferencia de días (3 por defecto)
+    let noches = 3;
+    const entrada = params.get('entrada');
+    const salida = params.get('salida');
+    if (entrada && salida) {
+      const dias = Math.round((new Date(salida) - new Date(entrada)) / 86400000);
+      if (dias > 0) noches = dias;
+      document.getElementById('sum-entrada').textContent = formatear(entrada);
+      document.getElementById('sum-salida').textContent = formatear(salida);
+    }
+    if (params.get('huespedes')) document.getElementById('sum-huespedes').textContent = params.get('huespedes');
+
+    // Rellena el resumen
+    document.getElementById('sum-img').src = hab.img;
+    document.getElementById('sum-nombre').textContent = hab.nombre;
+    document.getElementById('sum-noches').textContent = noches;
+    document.getElementById('sum-precio').textContent = hab.precio + ' €';
+    document.getElementById('sum-total').textContent = (hab.precio * noches) + ' €';
+
+    // Validación de Bootstrap y confirmación simulada (no se guarda nada)
+    const form = document.getElementById('reserva');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.classList.add('was-validated');
+      if (!form.checkValidity()) return;
+      document.getElementById('referencia').textContent = 'H10-' + Math.floor(100000 + Math.random() * 900000);
+      new bootstrap.Modal(document.getElementById('confirmacion')).show();
+    });
+  </script>
+</body>
+</html>

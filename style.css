@@ -1,52 +1,180 @@
 /* ===== Tokens (colores aproximados del Figma, ajusta con tus HEX) ===== */
 :root {
-  --h10-blue: #3A55BF;   /* navbar, buscador, footer */
-  --h10-green: #3BB89A;  /* botón principal */
-  --h10-gold: #C9A24B;   /* estrellas, etiquetas */
-  --h10-navy: #0B2545;   /* títulos */
-  --h10-sand: #F4E9D8;   /* fondo ofertas */
-  --h10-menu: #135F70;   /* panel del menú */
+  --h10-blue: #3A55BF;
+  /* navbar, buscador, footer */
+  --h10-green: #3BB89A;
+  /* botón principal */
+  --h10-gold: #C9A24B;
+  /* estrellas, etiquetas */
+  --h10-navy: #0B2545;
+  /* títulos */
+  --h10-sand: #F4E9D8;
+  /* fondo ofertas */
+  --h10-menu: #135F70;
+  /* panel del menú */
   --font-title: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', Arial, sans-serif;
 }
 
-body { font-family: var(--font-body); color: #1C2430; }
-h1, h2, h3, .logo { font-family: var(--font-title); }
-h2 { color: var(--h10-navy); }
-.eyebrow { font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; color: #13A3B5; }
+body {
+  font-family: var(--font-body);
+  color: #1C2430;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: var(--font-title);
+}
+
+h2 {
+  color: var(--h10-navy);
+}
+
+.eyebrow {
+  font-size: .75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #13A3B5;
+}
 
 /* Navbar */
-.navbar-h10 { background: var(--h10-blue); height: 64px; }
-.logo { font-weight: 700; line-height: 1.1; color: #fff; text-decoration: none; }
-.logo small { display: block; font: 500 .6rem var(--font-body); letter-spacing: 2px; color: var(--h10-gold); }
-.menu-panel { position: absolute; top: 12px; right: 12px; z-index: 1030; width: 190px; background: var(--h10-menu); }
-.menu-panel a { color: #fff; text-decoration: none; }
+.navbar-h10 {
+  background: var(--h10-blue);
+  height: 64px;
+}
+
+.logo {
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo small {
+  display: block;
+  font: 500 .6rem var(--font-body);
+  letter-spacing: 2px;
+  color: var(--h10-gold);
+}
+
+.menu-panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1030;
+  width: 190px;
+  background: var(--h10-menu);
+}
+
+.menu-panel a {
+  color: #fff;
+  text-decoration: none;
+}
 
 /* Hero */
-.hero { min-height: 520px; padding-bottom: 150px; color: #fff;
-  background: linear-gradient(180deg, rgba(19,163,181,.6), rgba(11,37,69,.95)); } /* sustituir por foto */
-.hero .stars { color: var(--h10-gold); letter-spacing: 3px; }
-.hero h1 { font-size: 2.25rem; }
+.hero {
+  min-height: 520px;
+  padding-bottom: 150px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(19, 163, 181, .6), rgba(11, 37, 69, .95));
+}
+
+/* sustituir por foto */
+.hero .stars {
+  color: var(--h10-gold);
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+}
 
 /* Buscador flotante sobre el hero */
-.search-card { margin-top: -130px; position: relative; background: var(--h10-blue); border-radius: 16px; box-shadow: 0 12px 30px rgba(11,37,69,.3); }
-.search-card label { font-size: .7rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: var(--h10-navy); }
-.btn-h10 { background: var(--h10-green); color: var(--h10-navy); font-weight: 600; border: 0; }
-.btn-h10:hover { background: #31a085; color: var(--h10-navy); }
+.search-card {
+  margin-top: -130px;
+  position: relative;
+  background: var(--h10-blue);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(11, 37, 69, .3);
+}
+
+.search-card label {
+  font-size: .7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--h10-navy);
+}
+
+.btn-h10 {
+  background: var(--h10-green);
+  color: var(--h10-navy);
+  font-weight: 600;
+  border: 0;
+}
+
+.btn-h10:hover {
+  background: #31a085;
+  color: var(--h10-navy);
+}
 
 /* Carrusel */
-.slide { height: 180px; border-radius: 16px; background: linear-gradient(135deg, #13A3B5, #3A55BF); }
-.carousel-caption { left: 1rem; right: auto; bottom: .5rem; text-align: left; font-weight: 600; }
+.slide {
+  height: 180px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #13A3B5, #3A55BF);
+}
+
+.carousel-caption {
+  left: 1rem;
+  right: auto;
+  bottom: .5rem;
+  text-align: left;
+  font-weight: 600;
+}
 
 /* Ofertas */
-.offers { background: var(--h10-sand); }
-.offer-img { height: 130px; background: linear-gradient(135deg, #13A3B5, var(--h10-navy)); }
-.tag-gold { background: var(--h10-gold); color: var(--h10-navy); font-weight: 600; }
+.offers {
+  background: var(--h10-sand);
+}
+
+.offer-img {
+  height: 130px;
+  background: linear-gradient(135deg, #13A3B5, var(--h10-navy));
+}
+
+.tag-gold {
+  background: var(--h10-gold);
+  color: var(--h10-navy);
+  font-weight: 600;
+}
 
 /* El hotel */
-.photo { height: 200px; border-radius: 16px; background: linear-gradient(135deg, #13A3B5, var(--h10-blue)); }
-.service { background: var(--h10-sand); border-radius: 12px; font-size: .85rem; font-weight: 500; color: var(--h10-navy); }
+.photo {
+  height: 200px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #13A3B5, var(--h10-blue));
+}
+
+.service {
+  background: var(--h10-sand);
+  border-radius: 12px;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--h10-navy);
+}
 
 /* Footer */
-.footer-h10 { background: var(--h10-blue); color: #fff; }
-.map { height: 120px; border-radius: 12px; background: #35A89E; }
+.footer-h10 {
+  background: var(--h10-blue);
+  color: #fff;
+}
+
+.map {
+  height: 120px;
+  border-radius: 12px;
+  background: #35A89E;
+}
